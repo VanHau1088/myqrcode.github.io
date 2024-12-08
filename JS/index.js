@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const userText = queryParams.get('text');
   
   if (title) {
-    document.querySelectorAll('title').textContent = title;
+    document.querySelectorAll('.title').textContent = title;
   }
   
   if (userText) {
-    document.querySelectorAll('userText').textContent = userText;
+    document.querySelectorAll('.userText').textContent = userText;
   }
 });
