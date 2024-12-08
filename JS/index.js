@@ -1,15 +1,13 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const queryParams = new URLSearchParams(window.location.search);
+    const title = queryParams.get('title');
     const userText = queryParams.get('text');
+    if(title){
+      document.querySelector('title').textContent = title;
+    }
+
     if (userText) {
-      document.getElementsByClassName('userText').textContent = userText;
+      document.querySelector('userText').textContent = userText;
     }
   });
 
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const queryParams = new URLSearchParams(window.location.search);
-    const usertitle = queryParams.get('title');
-    if (usertitle) {
-      document.getElementsByClassName('usertitle').textContent = usertitle;
-    }
-  });
