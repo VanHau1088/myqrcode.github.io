@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const title = queryParams.get('title');
   const userText = queryParams.get('text');
  if(title) {
-  document.querySelectorAll('title').textContent = title;
+  document.getElementById('title').textContent = title;
  }
   
  if (userText) {
