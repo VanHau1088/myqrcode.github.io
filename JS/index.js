@@ -8,6 +8,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
   
   if (userText) {
-    document. getElementById('userText').textContent = userText;
+    document.getElementById('userText').textContent = userText;
   }
 });
