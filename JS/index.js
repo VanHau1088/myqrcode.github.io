@@ -23,4 +23,3 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('userText').innerText = 'No content available';
   }
 });
-
