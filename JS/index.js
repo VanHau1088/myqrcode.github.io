@@ -14,12 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`http://localhost:3000/${shortUrl}`)
       .then(response => response.text())
       .then(text => {
-        document.getElementById('userText').innerText = decodeURIComponent(text);
+        document.getElementById('userText').textContent = decodeURIComponent(text);
       })
       .catch(error => {
-        document.getElementById('userText').innerText = 'Error loading content';
+        document.getElementById('userText').textContent = 'Error loading content';
       });
   } else {
-    document.getElementById('userText').innerText = 'No content available';
+    document.getElementById('userText').textContent = 'No content available';
   }
 });
