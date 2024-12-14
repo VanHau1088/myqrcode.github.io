@@ -36,9 +36,9 @@
       const params = new URLSearchParams(window.location.search);
       const text = params.get('text');
       if (text) {
-        document.getElementById('userText').innerText = text;
+        document.getElementById('userText').textContent = decodeURIComponent(text);
       } else {
-        document.getElementById('userText').innerText = 'No content available';
+        document.getElementById('userText').textContent = 'No content available';
       }
     });
 
