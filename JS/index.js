@@ -32,31 +32,16 @@
 //   }
 // });
 
-    // document.addEventListener('DOMContentLoaded', () => {
-    //   const params = new URLSearchParams(window.location.search);
-    //   const text = params.get('text');
-    //   if (text) {
-    //     document.getElementById('userText').textContent = decodeURIComponent(text);
-    //   } else {
-    //     document.getElementById('userText').textContent = 'No content available';
-    //   }
-    // });
-
-
-
     document.addEventListener('DOMContentLoaded', () => {
       const params = new URLSearchParams(window.location.search);
-      const shortUrl = params.get('shortUrl');
-      if (shortUrl) {
-        fetch(`http://localhost:3000/get-text?shortUrl=${shortUrl}`)
-          .then(response => response.json())
-          .then(data => {
-            const text = data.text;
-            if (text) {
-              document.getElementById('userText').innerText = text;
-            } else {
-              document.getElementById('userText').innerText = 'No content available';
-            }
-          });
+      const text = params.get('text');
+      if (text) {
+        document.getElementById('userText').textContent = decodeURIComponent(text);
+      } else {
+        document.getElementById('userText').textContent = 'No content available';
       }
     });
+
+
+
+
